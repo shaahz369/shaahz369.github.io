@@ -3,33 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammed Shahzad - Portfolio</title>
+    <title>Portfolio - Muhammed Shahzad</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
-        .container { background: white; padding: 20px; border-radius: 10px; width: 60%; margin: auto; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
-        h1 { color: #007bff; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { text-decoration: none; color: #007bff; font-weight: bold; }
-        a:hover { color: #0056b3; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            overflow: auto;
+            transition: background-color 0.5s ease;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            width: 80%;
+            max-width: 900px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
+            flex-direction: column;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 180px; /* Increased size */
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid white;
+            transition: transform 0.3s ease;
+            object-fit: cover; /* Maintains proportions */
+            max-width: 100%;
+        }
+        .profile img:hover {
+            transform: scale(1.1);
+        }
+        .content {
+            flex: 1;
+        }
+        h1, h2, p, a, .btn {
+            color: white;
+        }
+        .section {
+            margin-top: 15px;
+        }
+        a {
+            color: #4da6ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #ffffff;
+        }
+        .btn {
+            background: #4da6ff;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #357abd;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            background: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background 0.3s, color 0.3s;
+            margin-top: 10px;
+        }
+        .toggle-btn:hover {
+            background: gray;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hello, I'm Muhammed Shahzad 👋</h1>
-        <p>Data Science & AI Enthusiast | Developer</p>
-
-        <h2>🚀 Projects</h2>
-        <ul>
-            <li><a href="https://github.com/shaahz369/project1" target="_blank">Project 1</a></li>
-            <li><a href="https://github.com/shaahz369/project2" target="_blank">Project 2</a></li>
-        </ul>
-
-        <h2>🌐 Connect with Me</h2>
-        <p>
-            <a href="https://github.com/shaahz369" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank">LinkedIn</a>
-        </p>
+        <div class="profile">
+            <img src="WhatsApp Image 2025-03-15 at 16.46.01_dbd522ed.jpg" alt="Muhammed Shahzad"> <!-- Ensure a high-quality image -->
+        </div>
+        <div class="content">
+            <h1>Hello, I'm Muhammed Shahzad</h1>
+            <p>Data Science & AI Enthusiast | Developer</p>
+            
+            <div class="section">
+                <h2>📂 Projects</h2>
+                <a href="https://github.com/shaahz369/project1" target="_blank" class="btn">Project 1</a>
+                <a href="https://github.com/shaahz369/project2" target="_blank" class="btn">Project 2</a>
+            </div>
+            
+            <div class="section">
+                <h2>🌍 Connect with Me</h2>
+                <a href="https://github.com/shaahz369" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/in/muhammed-shahzad-196516296" target="_blank">LinkedIn</a> |
+                <a href="https://www.hackerrank.com/profile/s70618055" target="_blank">HackerRank</a> |
+                <a href="https://www.kaggle.com/shahzad35" target="_blank">Kaggle</a>
+            </div>
+            
+            <div class="section">
+                <h2>📝 Work History</h2>
+                <p>Intern at CSRBOX</p>
+                <ul>
+                    <li>Designed and built an AI-powered chatbot using IBM Watson Assistant.</li>
+                    <li>Developed successful project goals and strategies in collaboration with team members.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>📧 Contact</h2>
+                <p>Email: emails70618055@gmail.com</p>
+                <p>Phone: +91 8138816136</p>
+                <p>Location: Perinthalmanna, Malappuram, Kerala</p>
+            </div>
+            
+            <div class="section">
+                <h2>📝 Resume</h2>
+                <a href="resume.pdf" download class="btn">Download Resume</a>
+            </div>
+            
+            <div class="section">
+                <button class="toggle-btn" onclick="toggleMode()">Toggle Dark Mode</button>
+            </div>
+        </div>
     </div>
+    
+    <script>
+        function toggleMode() {
+            let body = document.body;
+            body.style.backgroundColor = body.style.backgroundColor === 'white' ? 'black' : 'white';
+        }
+    </script>
 </body>
 </html>
